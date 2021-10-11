@@ -27,6 +27,4 @@ public class Driver {
     public Set<Car> getCars() {
         return cars;
     }
-
-    //getter, setter, equals&hashCode
 }
