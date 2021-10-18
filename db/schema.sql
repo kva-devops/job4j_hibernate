@@ -52,3 +52,11 @@ create table history_owner (
         driver_id int not null references driver(id),
         car_id int not null references car(id)
 );
+
+-- Candidate
+create table candidates (
+    id serial primary key,
+    name varchar (255),
+    experience varchar (255),
+    salary int
+);
