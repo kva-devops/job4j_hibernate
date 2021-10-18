@@ -58,5 +58,25 @@ create table candidates (
     id serial primary key,
     name varchar (255),
     experience varchar (255),
-    salary int
+    salary int,
+    basevacancies_id int references base(id)
+);
+
+-- Vacancy and Base Vacancies
+create table vacancies (
+    id serial primary key,
+    name varchar (255),
+    description varchar (255),
+    salary int,
+    phone varchar (255)
+);
+
+create table base (
+    id serial primary key,
+    name varchar (255)
+);
+
+create table base_vacancies (
+    basevacancies_id int references base(id),
+    vacancylist_id int references vacancies(id)
 );
